@@ -36,17 +36,40 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Scrape reviews:
+### 1. Scrape Reviews
+Scrape 400+ reviews for each Ethiopian bank app from Google Play Store:
 ```bash
 python src/data/scrape_reviews.py
 ```
+- Output: `data/raw/raw_reviews.csv`
 
-2. Clean and process data:
+### 2. Clean and Process Data
+Clean the scraped reviews, remove duplicates, handle missing data, and normalize dates:
 ```bash
 python src/data/clean_reviews.py
 ```
+- Output: `data/processed/cleaned_reviews.csv`
 
-3. Run analysis notebooks in the `notebooks/` directory.
+### 3. Analyze Themes
+Extract common themes and generate word clouds for each bank:
+```bash
+python src/features/theme_analysis.py
+```
+- Output: `data/analysis/themes_by_bank.csv` and word cloud images in `data/analysis/`
+
+### 4. Run Jupyter Notebook
+Explore and visualize the data:
+```bash
+cd notebooks
+jupyter notebook
+```
+Open `bank_reviews_analysis.ipynb` for interactive analysis.
+
+### 5. Run Tests
+Run all tests to verify functionality:
+```bash
+pytest tests/
+```
 
 ## Development
 
