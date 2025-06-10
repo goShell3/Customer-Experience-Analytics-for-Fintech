@@ -13,4 +13,3 @@ google-play-scraper>=1.2.4
 nltk>=3.8.1
 wordcloud>=1.9.2
 spacy>=3.7.2
-ethiopic-nlp>=0.1.0 
